@@ -9,7 +9,7 @@ class FilterBarCafe extends StatelessWidget {
     return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
-        margin: EdgeInsets.only(bottom: 24),
+        margin: EdgeInsets.only(bottom: 82),
         width: 93,
         height: 40,
         decoration: BoxDecoration(

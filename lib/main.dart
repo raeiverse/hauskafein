@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hauskafein/cubit/pages_cubit.dart';
 import 'package:hauskafein/theme.dart';
+import 'package:hauskafein/ui/pages/Mainpage.dart';
 import 'package:hauskafein/ui/pages/cafepage.dart';
 import 'package:hauskafein/ui/pages/homepage.dart';
 
@@ -12,11 +15,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: whiteColor,
-        body: CafeMainpage(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => PagesCubit(),
+        ),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        routes: {
+          '/': (context) => Mainpage(),
+        },
       ),
     );
   }

@@ -22,6 +22,7 @@ class _SearchSortCafePageState extends State<SearchSortCafePage> {
       padding: const EdgeInsets.only(top: 16),
       child: Row(
         children: [
+          // SEARCH
           Container(
             margin: EdgeInsets.symmetric(horizontal: 16),
             width: MediaQuery.of(context).size.width / 1.7,
@@ -69,139 +70,72 @@ class _SearchSortCafePageState extends State<SearchSortCafePage> {
               ],
             ),
           ),
+          // SORT
           Expanded(
             child: Container(
               margin: EdgeInsets.only(right: 8),
               decoration: BoxDecoration(
                 color: orangeColor,
-                borderRadius: BorderRadius.circular(36),
+                borderRadius: BorderRadius.circular(28),
               ),
-              child: DropdownButton(
-                dropdownColor: orangeColor,
-                isExpanded: true,
-                iconSize: 0,
-                underline: SizedBox(),
-                borderRadius: BorderRadius.circular(16),
-                hint: Container(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Sort By',
-                          style: regularText.copyWith(
-                            color: whiteColor,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 14),
-                          child: Container(
-                            width: 24,
-                            height: MediaQuery.of(context).size.height,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      'assets/images/icon_dropdown.png'),
-                                  fit: BoxFit.contain),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: DropdownButton(
+                  dropdownColor: orangeColor,
+                  isExpanded: true,
+                  icon: Image(
+                    image: AssetImage('assets/images/icon_dropdown.png'),
+                    width: 16,
+                    height: 16,
+                    fit: BoxFit.contain,
+                  ),
+                  underline: SizedBox(),
+                  borderRadius: BorderRadius.circular(16),
+                  hint: Expanded(
+                    child: Container(
+                      child: Row(
+                        children: [
+                          Text(
+                            'Sort By',
+                            style: regularText.copyWith(
+                              color: whiteColor,
+                              fontSize: 12,
+                              fontWeight: medium,
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                value: selected,
-                items: SortData.map(
-                  (e) => DropdownMenuItem(
-                    value: e,
-                    child: Container(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                  value: selected,
+                  items: SortData.map(
+                    (e) => DropdownMenuItem(
+                      value: e,
+                      child: Container(
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
                               e,
                               style: regularText.copyWith(
                                 color: whiteColor,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 14),
-                              child: Container(
-                                width: 24,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage(
-                                          'assets/images/icon_dropdown.png'),
-                                      fit: BoxFit.contain),
-                                ),
+                                fontSize: 12,
+                                fontWeight: medium,
                               ),
                             ),
                           ],
                         ),
                       ),
                     ),
-                  ),
-                ).toList(),
-                onChanged: ((value) {
-                  setState(() {
-                    selected = value;
-                  });
-                }),
+                  ).toList(),
+                  onChanged: ((value) {
+                    setState(() {
+                      selected = value;
+                    });
+                  }),
+                ),
               ),
             ),
           ),
-          // Container(
-          //   margin: EdgeInsets.only(right: 16),
-          //   width: MediaQuery.of(context).size.width / 4,
-          //   height: 48,
-          //   decoration: BoxDecoration(
-          //     boxShadow: [
-          //       BoxShadow(
-          //         color: orangeColor.withOpacity(0.15),
-          //         blurRadius: 4,
-          //         offset: Offset(0, 5),
-          //       ),
-          //     ],
-          //     color: orangeColor,
-          //     borderRadius: BorderRadius.all(
-          //       Radius.circular(28),
-          //     ),
-          //   ),
-          //   child: Padding(
-          //     padding: const EdgeInsets.symmetric(horizontal: 8),
-          //     child: Row(
-          //       mainAxisAlignment: MainAxisAlignment.spaceAround,
-          //       crossAxisAlignment: CrossAxisAlignment.center,
-          //       children: [
-          //         Text(
-          //           'Sort By',
-          //           style: regularText.copyWith(
-          //             color: whiteColor,
-          //           ),
-          //         ),
-          //         Padding(
-          //           padding: const EdgeInsets.symmetric(vertical: 14),
-          //           child: Container(
-          //             width: 24,
-          //             height: MediaQuery.of(context).size.height,
-          //             decoration: BoxDecoration(
-          //               image: DecorationImage(
-          //                   image:
-          //                       AssetImage('assets/images/icon_dropdown.png'),
-          //                   fit: BoxFit.contain),
-          //             ),
-          //           ),
-          //         ),
-          //       ],
-          //     ),
-          //   ),
-          // ),
         ],
       ),
     );

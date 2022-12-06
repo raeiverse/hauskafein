@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 //color
 Color blackColor = Color(0xff0A0A0A);
 Color whiteColor = Color(0xffFFFFFF);
+Color grayColor = Color(0xff9E9E9E);
 Color orangeColor = Color(0xffFF5301);
 
 TextStyle titleText = TextStyle(fontFamily: 'ClashDisplay', color: blackColor);

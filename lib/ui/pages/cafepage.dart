@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hauskafein/theme.dart';
 import 'package:hauskafein/ui/pages/GlobalBottomNavBar.dart';
-import 'package:hauskafein/ui/widget/cafe/BottomNavbarCafe.dart';
 import 'package:hauskafein/ui/widget/cafe/FilterBarCafe.dart';
 import 'package:hauskafein/ui/widget/cafe/HeaderCafe.dart';
-import 'package:hauskafein/ui/widget/homepage/BottomNavBar.dart';
 
 class CafeMainpage extends StatelessWidget {
   const CafeMainpage({super.key});
@@ -38,7 +36,7 @@ class CafeMainpage extends StatelessWidget {
                 ),
               ],
             ),
-            BottomNavbarCafe(),
+            FilterBarCafe(),
           ],
         ),
       ),

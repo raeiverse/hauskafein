@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hauskafein/ui/widget/homepage/BottomNavBar.dart';
+
+import 'package:hauskafein/ui/widget/homepage/BottomSearchRecNavBar.dart';
 import 'package:hauskafein/ui/widget/homepage/NewsHomepage.dart';
 import 'package:hauskafein/ui/widget/homepage/event_homepage.dart';
 import 'package:hauskafein/ui/widget/homepage/today_homepage.dart';
@@ -27,7 +28,8 @@ class Homepage extends StatelessWidget {
               ),
             ),
           ),
-          BottomNavBar(),
+          SearchRecNavBar(),
+          // BottomNavBar(),
         ],
       ),
     );
