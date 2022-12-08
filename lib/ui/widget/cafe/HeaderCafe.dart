@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:hauskafein/theme.dart';
+import 'package:hauskafein/ui/pages/BackButtonWidget.dart';
 import 'package:hauskafein/ui/widget/cafe/SearchSortCafe.dart';
 
 class HeaderCafe extends StatelessWidget {
@@ -12,43 +13,7 @@ class HeaderCafe extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 16, top: 46),
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
-              boxShadow: [
-                BoxShadow(
-                  color: whiteColor.withOpacity(0.7),
-                ),
-              ],
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(8),
-              child: Container(
-                child: BackdropFilter(
-                  filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                  child: Container(
-                    margin: EdgeInsets.all(6),
-                    width: 20,
-                    height: 20,
-                    decoration: BoxDecoration(
-                      // boxShadow: [
-                      //   BoxShadow(
-                      //     color: whiteColor.withOpacity(0.5),
-                      //   ),
-                      // ],
-                      image: DecorationImage(
-                        image: AssetImage('assets/images/icon_back.png'),
-                        fit: BoxFit.contain,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ),
+        BackButtonWidget(),
         Padding(
           padding: const EdgeInsets.only(left: 16, top: 74),
           child: Text(

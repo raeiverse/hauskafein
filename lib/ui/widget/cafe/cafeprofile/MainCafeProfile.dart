@@ -2,8 +2,10 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:hauskafein/theme.dart';
+import 'package:hauskafein/ui/pages/BackButtonWidget.dart';
 import 'package:hauskafein/ui/widget/cafe/cafeprofile/HeaderCafeProfile.dart';
 import 'package:hauskafein/ui/widget/cafe/cafeprofile/TitleCafeProfile.dart';
+import 'package:hauskafein/ui/widget/cafe/cafeprofile/overviewcafe/MainOverview.dart';
 
 class MainCafeProfile extends StatelessWidget {
   const MainCafeProfile({super.key});
@@ -45,9 +47,11 @@ class MainCafeProfile extends StatelessWidget {
                   rating: 4.8,
                   price: '\$\$',
                 ),
+                MainOverview(),
               ],
             ),
           ),
+          BackButtonWidget(),
         ],
       ),
     );

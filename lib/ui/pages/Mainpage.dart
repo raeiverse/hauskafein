@@ -21,7 +21,6 @@ class Mainpage extends StatelessWidget {
       default:
         return Homepage();
     }
-    ;
   }
 
   Widget BottomNavBar() {

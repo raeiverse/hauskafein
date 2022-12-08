@@ -10,28 +10,6 @@ class HeaderCafeProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        // Container(
-        //   margin: EdgeInsets.only(bottom: 8),
-        //   width: double.infinity,
-        //   height: 297,
-        //   decoration: BoxDecoration(
-        //     image: DecorationImage(
-        //       image: AssetImage('assets/images/cafe/images_popular_1.png'),
-        //       fit: BoxFit.fill,
-        //     ),
-        //   ),
-        //   child: BackdropFilter(
-        //     filter: ImageFilter.blur(
-        //       sigmaX: 5,
-        //       sigmaY: 5,
-        //     ),
-        //     child: Container(
-        //       decoration: BoxDecoration(
-        //         color: Neutral10.withOpacity(0.2),
-        //       ),
-        //     ),
-        //   ),
-        // ),
         Column(
           children: [
             Align(

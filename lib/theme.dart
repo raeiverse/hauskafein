@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 Color blackColor = Color(0xff0A0A0A);
 Color whiteColor = Color(0xffFFFFFF);
 Color grayColor = Color(0xff9E9E9E);
+Color transparentColor = Colors.transparent;
 Color Neutral10 = Color(0xffFFFFFF);
 Color Neutral20 = Color(0xffF4F4F4);
 Color Neutral30 = Color(0xffECECEC);
@@ -19,6 +20,14 @@ Color orangeColor = Color(0xffFF5301);
 
 TextStyle titleText = TextStyle(fontFamily: 'ClashDisplay', color: blackColor);
 TextStyle regularText = GoogleFonts.poppins(color: blackColor);
+
+//padding
+Padding backbutton = Padding(
+  padding: EdgeInsets.only(left: 24, top: 44),
+);
+
+//border
+BorderRadius CardRadius = BorderRadius.all(Radius.circular(8));
 
 //fontweight
 FontWeight light = FontWeight.w300;
