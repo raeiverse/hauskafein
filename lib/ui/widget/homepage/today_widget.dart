@@ -40,7 +40,7 @@ class Today_Widget extends StatelessWidget {
                     color: blackColor.withOpacity(0.15),
                     blurRadius: 35,
                     offset: Offset(0, 8),
-                  )
+                  ),
                 ],
               ),
               child: Column(

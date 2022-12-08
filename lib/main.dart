@@ -5,6 +5,7 @@ import 'package:hauskafein/theme.dart';
 import 'package:hauskafein/ui/pages/Mainpage.dart';
 import 'package:hauskafein/ui/pages/cafepage.dart';
 import 'package:hauskafein/ui/pages/homepage.dart';
+import 'package:hauskafein/ui/widget/cafe/cafeprofile/MainCafeProfile.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         routes: {
           '/': (context) => Mainpage(),
+          '/cafeprofile': (context) => MainCafeProfile(),
         },
       ),
     );

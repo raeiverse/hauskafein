@@ -91,20 +91,18 @@ class _SearchSortCafePageState extends State<SearchSortCafePage> {
                   ),
                   underline: SizedBox(),
                   borderRadius: BorderRadius.circular(16),
-                  hint: Expanded(
-                    child: Container(
-                      child: Row(
-                        children: [
-                          Text(
-                            'Sort By',
-                            style: regularText.copyWith(
-                              color: whiteColor,
-                              fontSize: 12,
-                              fontWeight: medium,
-                            ),
+                  hint: Container(
+                    child: Row(
+                      children: [
+                        Text(
+                          'Sort By',
+                          style: regularText.copyWith(
+                            color: whiteColor,
+                            fontSize: 12,
+                            fontWeight: medium,
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                   value: selected,
