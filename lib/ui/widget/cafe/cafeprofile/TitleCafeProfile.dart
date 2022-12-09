@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:hauskafein/theme.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class TitleCafeProfile extends StatelessWidget {
   final String title;
@@ -15,6 +16,25 @@ class TitleCafeProfile extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  _launchDirectionUrl() async {
+    Uri DirectionUrl = Uri.parse(
+        'https://www.google.com/maps/dir/-7.9691776,112.6301696/ancala+cafe/@-7.9062455,112.5083542,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x2e787f5b159fae01:0xc4a92abb54d648d1!2m2!1d112.5240383!2d-7.8430025');
+    if (await canLaunchUrl(DirectionUrl)) {
+      await launchUrl(DirectionUrl);
+    } else {
+      throw 'Could not launch $DirectionUrl';
+    }
+  }
+
+  _launchGrabUrl() async {
+    Uri GrabUrl = Uri.parse('Not Found');
+    if (await canLaunchUrl(GrabUrl)) {
+      await launchUrl(GrabUrl);
+    } else {
+      throw 'Could not launch $GrabUrl';
+    }
+  }
+
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.all(
@@ -80,48 +100,60 @@ class TitleCafeProfile extends StatelessWidget {
                       ],
                     ),
                     // DIRECTION
-                    Column(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(bottom: 4),
-                          width: 20,
-                          height: 20,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/icon_direction.png'),
-                                fit: BoxFit.contain),
+                    GestureDetector(
+                      onTap: () {
+                        _launchDirectionUrl();
+                      },
+                      child: Column(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(bottom: 4),
+                            width: 20,
+                            height: 20,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      'assets/images/icon_direction.png'),
+                                  fit: BoxFit.contain),
+                            ),
                           ),
-                        ),
-                        Text(
-                          'Direction',
-                          style: BodyRegular.copyWith(
-                            color: Neutral70,
+                          Text(
+                            'Direction',
+                            style: BodyRegular.copyWith(
+                              color: Neutral70,
+                              decoration: TextDecoration.underline,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                     // GRABFOOD
-                    Column(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(bottom: 4),
-                          width: 20,
-                          height: 20,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/icon_grabfood.png'),
-                                fit: BoxFit.contain),
+                    GestureDetector(
+                      onTap: () {
+                        // _launchGrabUrl();
+                      },
+                      child: Column(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(bottom: 4),
+                            width: 20,
+                            height: 20,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      'assets/images/icon_grabfood.png'),
+                                  fit: BoxFit.contain),
+                            ),
                           ),
-                        ),
-                        Text(
-                          'Grabfood',
-                          style: BodyRegular.copyWith(
-                            color: Neutral70,
+                          Text(
+                            'Grabfood',
+                            style: BodyRegular.copyWith(
+                              color: Neutral70,
+                              decoration: TextDecoration.underline,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                     // PRICEY
                     Column(

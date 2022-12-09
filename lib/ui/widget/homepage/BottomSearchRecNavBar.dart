@@ -35,7 +35,7 @@ class _SearchRecNavBarState extends State<SearchRecNavBar> {
                   children: [
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 4),
-                      width: 83,
+                      width: MediaQuery.of(context).size.width / 4.3,
                       height: 28,
                       decoration: BoxDecoration(
                         color: orangeColor,

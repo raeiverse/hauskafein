@@ -17,7 +17,7 @@ class ContentNavbarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.read<ContentCubit>().setPage(index);
+        context.read<ContentCubit>().setContent(index);
       },
       child: Container(
         width: MediaQuery.of(context).size.width / 2.5,
@@ -25,7 +25,7 @@ class ContentNavbarWidget extends StatelessWidget {
         decoration: BoxDecoration(
           border: Border(
             bottom: BorderSide(
-              color: context.read<PagesCubit>().state == index
+              color: context.read<ContentCubit>().state == index
                   ? orangeColor
                   : transparentColor,
             ),
@@ -35,7 +35,7 @@ class ContentNavbarWidget extends StatelessWidget {
           child: Text(
             title,
             style: BodyRegular.copyWith(
-              color: context.read<PagesCubit>().state == index
+              color: context.read<ContentCubit>().state == index
                   ? orangeColor
                   : Neutral80,
             ),
