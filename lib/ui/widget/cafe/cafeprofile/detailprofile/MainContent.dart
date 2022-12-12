@@ -42,7 +42,6 @@ class MainContent extends StatelessWidget {
       builder: (context, CurrentIndexContent) {
         return Container(
           width: MediaQuery.of(context).size.width / 1.14,
-          height: 522,
           decoration: BoxDecoration(
             color: whiteColor,
             borderRadius: CardRadius,

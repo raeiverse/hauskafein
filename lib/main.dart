@@ -24,6 +24,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => ContentCubit(),
         ),
+        BlocProvider(
+          create: (context) => MenuTagCubit(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

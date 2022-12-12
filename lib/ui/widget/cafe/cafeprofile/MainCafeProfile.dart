@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:hauskafein/theme.dart';
 import 'package:hauskafein/ui/pages/BackButtonWidget.dart';
 import 'package:hauskafein/ui/widget/cafe/cafeprofile/HeaderCafeProfile.dart';
+import 'package:hauskafein/ui/widget/cafe/cafeprofile/ReviewCafeProfile.dart';
 import 'package:hauskafein/ui/widget/cafe/cafeprofile/TitleCafeProfile.dart';
 import 'package:hauskafein/ui/widget/cafe/cafeprofile/detailprofile/MainContent.dart';
 
@@ -48,6 +49,12 @@ class MainCafeProfile extends StatelessWidget {
                   price: '\$\$',
                 ),
                 MainContent(),
+                ReviewCafeProfile(
+                  imageUrl: 'assets/images/1.jpg',
+                  title: 'A Review: Ancala Coffee & Bistro',
+                  desc:
+                      'Description container, where you can spoil about the review',
+                ),
               ],
             ),
           ),

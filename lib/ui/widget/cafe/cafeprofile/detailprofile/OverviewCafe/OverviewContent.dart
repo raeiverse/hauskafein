@@ -11,9 +11,7 @@ class OverviewContent extends StatelessWidget {
     return Container(
       child: Padding(
         padding: const EdgeInsets.only(
-          // left: 16,
           top: 8,
-          // right: 8,
           bottom: 16,
         ),
         child: Column(
@@ -41,7 +39,7 @@ class OverviewContent extends StatelessWidget {
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

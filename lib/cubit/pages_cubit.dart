@@ -14,3 +14,10 @@ class ContentCubit extends Cubit<int> {
     emit(NewContent);
   }
 }
+
+class MenuTagCubit extends Cubit<int> {
+  MenuTagCubit() : super((0));
+  void setMenuTag(int NewMenuTag) {
+    emit(NewMenuTag);
+  }
+}
