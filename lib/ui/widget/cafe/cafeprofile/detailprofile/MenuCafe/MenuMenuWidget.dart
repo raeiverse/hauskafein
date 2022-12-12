@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:hauskafein/theme.dart';
+import '../../../../../../theme.dart';
 
-class AllMenuWidget extends StatelessWidget {
-  const AllMenuWidget({super.key});
+class MenuMenuWidget extends StatelessWidget {
+  final String imageUrl;
+  final String title;
+  final String desc;
+  final String price;
+  final String tag;
+  const MenuMenuWidget(
+      {Key? key,
+      required this.imageUrl,
+      required this.title,
+      this.desc = ' ',
+      required this.price,
+      required this.tag})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +32,7 @@ class AllMenuWidget extends StatelessWidget {
               color: blackColor,
               borderRadius: CardRadius,
               image: DecorationImage(
-                image: AssetImage('assets/images/1.jpg'),
+                image: AssetImage(imageUrl),
                 fit: BoxFit.fill,
               ),
             ),
@@ -32,7 +44,7 @@ class AllMenuWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Cappucino',
+                    title,
                     style: HeadlineSub.copyWith(
                       color: Neutral100,
                     ),
@@ -40,7 +52,7 @@ class AllMenuWidget extends StatelessWidget {
                     maxLines: 1,
                   ),
                   Text(
-                    'Menggunakan biji kopi robusta',
+                    desc,
                     style: CaptionRegular.copyWith(
                       color: Neutral70,
                     ),
@@ -49,7 +61,7 @@ class AllMenuWidget extends StatelessWidget {
                   ),
                   Spacer(),
                   Text(
-                    'Rp18.000,00',
+                    price,
                     style: BodyRegular.copyWith(
                       color: orangeColor,
                     ),

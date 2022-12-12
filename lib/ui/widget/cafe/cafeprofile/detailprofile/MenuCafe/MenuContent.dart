@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hauskafein/ui/widget/cafe/cafeprofile/detailprofile/MenuCafe/AllMenu.dart';
+import 'package:hauskafein/ui/widget/cafe/cafeprofile/detailprofile/MenuCafe/MenuMenu.dart';
 import 'package:hauskafein/ui/widget/cafe/cafeprofile/detailprofile/MenuCafe/MenuTag.dart';
 
 class MenuContent extends StatelessWidget {
@@ -19,6 +20,7 @@ class MenuContent extends StatelessWidget {
             children: [
               MenuTag(),
               AllMenu(),
+              MenuMenu(),
             ],
           ),
         ],

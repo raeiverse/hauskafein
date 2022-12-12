@@ -29,7 +29,6 @@ class Homepage extends StatelessWidget {
             ),
           ),
           SearchRecNavBar(),
-          // BottomNavBar(),
         ],
       ),
     );

@@ -43,7 +43,7 @@ class Mainpage extends StatelessWidget {
                   ),
                   GlobalBottomNavBarWidget(
                     index: 1,
-                    imageUrl: 'assets/images/icon_coffee.png',
+                    imageUrl: 'assets/images/icon_cafe.png',
                     title: 'Coffee',
                   ),
                   GlobalBottomNavBarWidget(

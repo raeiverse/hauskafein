@@ -5,6 +5,7 @@ import 'package:hauskafein/theme.dart';
 import 'package:hauskafein/ui/pages/Mainpage.dart';
 import 'package:hauskafein/ui/pages/cafepage.dart';
 import 'package:hauskafein/ui/pages/homepage.dart';
+import 'package:hauskafein/ui/widget/cafe/FilterPage.dart';
 import 'package:hauskafein/ui/widget/cafe/cafeprofile/MainCafeProfile.dart';
 
 void main(List<String> args) {
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (context) => Mainpage(),
           '/cafeprofile': (context) => MainCafeProfile(),
+          '/filterpage': (context) => FilterPage(),
         },
       ),
     );
