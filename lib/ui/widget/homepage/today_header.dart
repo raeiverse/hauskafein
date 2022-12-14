@@ -20,7 +20,7 @@ class _Today_HeaderState extends State<Today_Header> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(
-        top: 16,
+        top: 44,
         left: 24,
         bottom: 8,
       ),

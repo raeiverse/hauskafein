@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hauskafein/theme.dart';
 
 import 'package:hauskafein/ui/widget/homepage/BottomSearchRecNavBar.dart';
 import 'package:hauskafein/ui/widget/homepage/NewsHomepage.dart';
@@ -11,24 +12,28 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: whiteColor,
       body: Stack(
         children: [
-          SafeArea(
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Today_Homepage(),
-                  Event_Homepage(),
-                  NewsHomepage(),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height / 7.2,
-                  )
-                ],
-              ),
+          SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Today_Homepage(),
+                Event_Homepage(),
+                NewsHomepage(),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height / 7.2,
+                )
+              ],
             ),
           ),
-          SearchRecNavBar(),
+          SearchRecNavBar(
+            baseColor: orangeColor,
+            textColor: Neutral10,
+            baseSColor: transparentColor,
+            textSColor: Neutral90,
+          ),
         ],
       ),
     );

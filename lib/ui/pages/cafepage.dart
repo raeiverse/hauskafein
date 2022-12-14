@@ -4,8 +4,8 @@ import 'package:hauskafein/ui/widget/cafe/FilterBarCafe.dart';
 import 'package:hauskafein/ui/widget/cafe/HeaderCafe.dart';
 import 'package:hauskafein/ui/widget/cafe/InfoCardCafe.dart';
 
-class CafeMainpage extends StatelessWidget {
-  const CafeMainpage({super.key});
+class CafePage extends StatelessWidget {
+  const CafePage({super.key});
 
   @override
   Widget build(BuildContext context) {

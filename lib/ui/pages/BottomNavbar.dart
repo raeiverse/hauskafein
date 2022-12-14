@@ -1,35 +1,16 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hauskafein/cubit/pages_cubit.dart';
-import 'package:hauskafein/theme.dart';
+import 'package:hauskafein/ui/pages/BottomNavbarWidget.dart';
 import 'package:hauskafein/ui/pages/GlobalBottomNavBarWidget.dart';
 import 'package:hauskafein/ui/pages/cafepage.dart';
 import 'package:hauskafein/ui/pages/homepage.dart';
-import 'package:hauskafein/ui/pages/newspage.dart';
-import 'package:hauskafein/ui/pages/recipepage.dart';
 
-class Mainpage extends StatelessWidget {
-  const Mainpage({super.key});
+class BottomNavbar extends StatelessWidget {
+  const BottomNavbar({super.key});
 
   @override
-  Widget BuildContent(int CurrentIndex) {
-    switch (CurrentIndex) {
-      case 0:
-        return Homepage();
-      case 1:
-        return CafePage();
-      case 2:
-        return NewsPage();
-      case 3:
-        return RecipePage();
-      default:
-        return Homepage();
-    }
-  }
-
-  Widget BottomNavBar() {
+  Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -42,20 +23,23 @@ class Mainpage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  GlobalBottomNavBarWidget(
-                    index: 0,
+                  BottomNavbarWidget(
                     imageUrl: 'assets/images/icon_home.png',
                     title: 'Home',
+                    pages: '/',
+                    isSelected: false,
                   ),
-                  GlobalBottomNavBarWidget(
-                    index: 1,
+                  BottomNavbarWidget(
                     imageUrl: 'assets/images/icon_cafe.png',
                     title: 'Coffee',
+                    pages: '/cafepage',
+                    isSelected: true,
                   ),
-                  GlobalBottomNavBarWidget(
-                    index: 2,
+                  BottomNavbarWidget(
                     imageUrl: 'assets/images/icon_news.png',
                     title: 'News',
+                    pages: '/newspage',
+                    isSelected: false,
                   ),
                   GlobalBottomNavBarWidget(
                     index: 3,
@@ -68,22 +52,6 @@ class Mainpage extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-
-  Widget build(BuildContext context) {
-    return BlocBuilder<PagesCubit, int>(
-      builder: (context, CurrentIndex) {
-        return Scaffold(
-          backgroundColor: whiteColor,
-          body: Stack(
-            children: [
-              BuildContent(CurrentIndex),
-              BottomNavBar(),
-            ],
-          ),
-        );
-      },
     );
   }
 }

@@ -3,14 +3,19 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:hauskafein/theme.dart';
 
-class SearchRecNavBar extends StatefulWidget {
-  const SearchRecNavBar({super.key});
+class SearchRecNavBar extends StatelessWidget {
+  final Color baseColor;
+  final Color textColor;
+  final Color baseSColor;
+  final Color textSColor;
+  const SearchRecNavBar({
+    Key? key,
+    required this.baseColor,
+    required this.textColor,
+    required this.baseSColor,
+    required this.textSColor,
+  }) : super(key: key);
 
-  @override
-  State<SearchRecNavBar> createState() => _SearchRecNavBarState();
-}
-
-class _SearchRecNavBarState extends State<SearchRecNavBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,38 +38,48 @@ class _SearchRecNavBarState extends State<SearchRecNavBar> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 4),
-                      width: MediaQuery.of(context).size.width / 4.3,
-                      height: 28,
-                      decoration: BoxDecoration(
-                        color: orangeColor,
-                        borderRadius: BorderRadius.circular(14),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'For You',
-                          style: regularText.copyWith(
-                            fontWeight: medium,
-                            color: whiteColor,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/');
+                      },
+                      child: Container(
+                        margin: EdgeInsets.symmetric(vertical: 4),
+                        width: MediaQuery.of(context).size.width / 4.5,
+                        height: 28,
+                        decoration: BoxDecoration(
+                          color: baseColor,
+                          borderRadius: BorderRadius.circular(14),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'For You',
+                            style: regularText.copyWith(
+                              fontWeight: medium,
+                              color: textColor,
+                            ),
                           ),
                         ),
                       ),
                     ),
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 4),
-                      width: 83,
-                      height: 28,
-                      decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(14),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Search',
-                          style: regularText.copyWith(
-                            fontWeight: medium,
-                            color: blackColor,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/searchpage');
+                      },
+                      child: Container(
+                        margin: EdgeInsets.symmetric(vertical: 4),
+                        width: MediaQuery.of(context).size.width / 4.5,
+                        height: 28,
+                        decoration: BoxDecoration(
+                          color: baseSColor,
+                          borderRadius: BorderRadius.circular(14),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Search',
+                            style: regularText.copyWith(
+                              fontWeight: medium,
+                              color: textSColor,
+                            ),
                           ),
                         ),
                       ),
