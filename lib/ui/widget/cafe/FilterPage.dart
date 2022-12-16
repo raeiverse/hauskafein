@@ -44,17 +44,14 @@ class FilterPage extends StatelessWidget {
                 SizedBox(height: 24),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
-                  child: Center(
-                    child: Wrap(
-                      children: [
-                        FilterContent(),
-                        FilterContent(),
-                        FilterContent(),
-                        FilterContent(),
-                        FilterContent(),
-                        FilterContent(),
-                      ],
-                    ),
+                  child: Wrap(
+                    children: [
+                      FilterContent(),
+                      FilterContent(),
+                      FilterContent(),
+                      FilterContent(),
+                      FilterContent(),
+                    ],
                   ),
                 ),
                 SizedBox(height: 8),
@@ -67,14 +64,11 @@ class FilterPage extends StatelessWidget {
                 SizedBox(height: 24),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
-                  child: Center(
-                    child: Wrap(
-                      children: [
-                        FilterContent(),
-                        FilterContent(),
-                        FilterContent(),
-                      ],
-                    ),
+                  child: Wrap(
+                    children: [
+                      FilterContent(),
+                      FilterContent(),
+                    ],
                   ),
                 ),
               ],

@@ -4,6 +4,7 @@ import 'package:hauskafein/theme.dart';
 import 'package:hauskafein/ui/pages/BottomNavbar.dart';
 import 'package:hauskafein/ui/widget/homepage/BottomSearchRecNavBar.dart';
 import 'package:hauskafein/ui/widget/homepage/search/SearchFilter.dart';
+import 'package:hauskafein/ui/widget/homepage/search/SearchPopular.dart';
 import 'package:latlong2/latlong.dart';
 
 class SearchPage extends StatelessWidget {
@@ -17,44 +18,70 @@ class SearchPage extends StatelessWidget {
         children: [
           Stack(
             children: [
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: 413,
-                decoration: BoxDecoration(
-                  color: transparentColor,
-                ),
-                child: FlutterMap(
-                  options: MapOptions(
-                    center: LatLng(-8.07323580, 111.90734310),
+              Padding(
+                padding: const EdgeInsets.only(top: 66),
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
+                  decoration: BoxDecoration(
+                    color: transparentColor,
                   ),
-                  children: [
-                    TileLayer(
-                      urlTemplate:
-                          'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                      userAgentPackageName:
-                          'dev.hauskafein.flutter_map.example',
+                  child: FlutterMap(
+                    options: MapOptions(
+                      center: LatLng(-7.8698049, 112.523706),
+                      zoom: 12,
                     ),
-                    MarkerLayer(
-                      markers: [
-                        Marker(
-                          point: LatLng(-7.8698049, 112.523706),
-                          builder: (ctx) => Icon(Icons.pin_drop),
-                        ),
-                      ],
-                    )
-                  ],
+                    children: [
+                      TileLayer(
+                        urlTemplate:
+                            'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                        userAgentPackageName:
+                            'dev.hauskafein.flutter_map.example',
+                      ),
+                      MarkerLayer(
+                        markers: [
+                          Marker(
+                            // width: 50,
+                            // height: 69,
+                            point: LatLng(-7.8698049, 112.523706),
+                            builder: (ctx) => Image.asset(
+                              'assets/images/point_1.png',
+                              // width: 50,
+                              // height: 69,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
-              //BACKGROUND TOP
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: 223,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(
-                          'assets/images/images_searchBackground.png'),
-                      fit: BoxFit.cover),
-                ),
+              Column(
+                children: [
+                  //BACKGROUND TOP
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 223,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(
+                              'assets/images/images_searchBackground.png'),
+                          fit: BoxFit.cover),
+                    ),
+                  ),
+                  Spacer(),
+                  //BACKGROUND BOTTOM
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 302,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(
+                              'assets/images/images_searchBackgroundBottom.png'),
+                          fit: BoxFit.cover),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
@@ -64,7 +91,22 @@ class SearchPage extends StatelessWidget {
             baseSColor: orangeColor,
             textSColor: Neutral10,
           ),
-          SearchFilter(),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              SearchFilter(),
+              SearchPopular(),
+            ],
+          ),
+          //WHITE BACKGROUND NAVBAR
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: 66,
+              decoration: BoxDecoration(color: whiteColor),
+            ),
+          ),
           BottomNavbar(),
         ],
       ),

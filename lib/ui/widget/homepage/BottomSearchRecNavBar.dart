@@ -19,7 +19,7 @@ class SearchRecNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 82),
+      margin: EdgeInsets.only(bottom: 66),
       child: Align(
         alignment: Alignment.bottomCenter,
         child: Container(

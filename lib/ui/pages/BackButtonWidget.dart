@@ -19,7 +19,7 @@ class BackButtonWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             boxShadow: [
               BoxShadow(
-                color: whiteColor.withOpacity(0.7),
+                color: whiteColor.withOpacity(0.5),
               ),
             ],
           ),
