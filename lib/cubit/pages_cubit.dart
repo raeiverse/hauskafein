@@ -21,3 +21,10 @@ class MenuTagCubit extends Cubit<int> {
     emit(NewMenuTag);
   }
 }
+
+class BackgroundImageCafeProfileCubit extends Cubit<int> {
+  BackgroundImageCafeProfileCubit() : super((0));
+  void setBackgroundImage(int newBackgroundImage) {
+    emit(newBackgroundImage);
+  }
+}

@@ -64,6 +64,7 @@ class CafePage extends StatelessWidget {
                   open: '11.00',
                   closed: '23.00',
                 ),
+                SizedBox(height: 82),
               ],
             ),
           ),

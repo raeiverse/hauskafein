@@ -7,7 +7,7 @@ import 'package:hauskafein/theme.dart';
 import 'package:hauskafein/ui/pages/GlobalBottomNavBarWidget.dart';
 import 'package:hauskafein/ui/pages/cafepage.dart';
 import 'package:hauskafein/ui/pages/homepage.dart';
-import 'package:hauskafein/ui/pages/newspage.dart';
+import 'package:hauskafein/ui/pages/magazinepage.dart';
 import 'package:hauskafein/ui/pages/recipepage.dart';
 
 class Mainpage extends StatelessWidget {
@@ -21,7 +21,7 @@ class Mainpage extends StatelessWidget {
       case 1:
         return CafePage();
       case 2:
-        return NewsPage();
+        return MagazinePage();
       case 3:
         return RecipePage();
       default:
@@ -50,12 +50,12 @@ class Mainpage extends StatelessWidget {
                   GlobalBottomNavBarWidget(
                     index: 1,
                     imageUrl: 'assets/images/icon_cafe.png',
-                    title: 'Coffee',
+                    title: 'Cafe',
                   ),
                   GlobalBottomNavBarWidget(
                     index: 2,
                     imageUrl: 'assets/images/icon_news.png',
-                    title: 'News',
+                    title: 'Magazine',
                   ),
                   GlobalBottomNavBarWidget(
                     index: 3,

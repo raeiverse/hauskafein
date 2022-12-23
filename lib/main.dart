@@ -5,7 +5,7 @@ import 'package:hauskafein/theme.dart';
 import 'package:hauskafein/ui/pages/Mainpage.dart';
 import 'package:hauskafein/ui/pages/cafepage.dart';
 import 'package:hauskafein/ui/pages/homepage.dart';
-import 'package:hauskafein/ui/pages/newspage.dart';
+import 'package:hauskafein/ui/pages/magazinepage.dart';
 import 'package:hauskafein/ui/pages/recipepage.dart';
 import 'package:hauskafein/ui/widget/cafe/FilterPage.dart';
 import 'package:hauskafein/ui/widget/cafe/cafeprofile/MainCafeProfile.dart';
@@ -31,6 +31,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => MenuTagCubit(),
         ),
+        BlocProvider(
+          create: (context) => BackgroundImageCafeProfileCubit(),
+        )
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -38,7 +41,7 @@ class MyApp extends StatelessWidget {
           '/': (context) => Mainpage(),
           '/cafeprofile': (context) => MainCafeProfile(),
           '/cafepage': (context) => CafePage(),
-          '/newspage': (context) => NewsPage(),
+          '/magazinepage': (context) => MagazinePage(),
           '/recipepage': (context) => RecipePage(),
           '/filterpage': (context) => FilterPage(),
           '/searchpage': (context) => SearchPage(),
