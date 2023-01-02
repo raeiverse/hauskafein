@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hauskafein/theme.dart';
 import 'package:hauskafein/ui/pages/BackButtonWidget.dart';
-import 'package:hauskafein/ui/widget/magazine/HeaderCardWidget.dart';
+import 'package:hauskafein/ui/widget/magazine/TeamReviewCardWidget.dart';
 
-class HeaderMagazine extends StatelessWidget {
-  const HeaderMagazine({super.key});
+class TeamReviewMagazine extends StatelessWidget {
+  const TeamReviewMagazine({super.key});
 
   @override
   Widget build(BuildContext context) {

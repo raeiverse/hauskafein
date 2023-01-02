@@ -87,6 +87,6 @@ TextStyle CaptionRegular = GoogleFonts.poppins(
   fontSize: 10,
 );
 TextStyle CaptionMedium = GoogleFonts.poppins(
-  fontWeight: regular,
+  fontWeight: medium,
   fontSize: 10,
 );

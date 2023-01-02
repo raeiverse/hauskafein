@@ -3,8 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:hauskafein/ui/pages/BottomNavbarWidget.dart';
 import 'package:hauskafein/ui/pages/GlobalBottomNavBarWidget.dart';
-import 'package:hauskafein/ui/pages/cafepage.dart';
-import 'package:hauskafein/ui/pages/homepage.dart';
 
 class BottomNavbar extends StatelessWidget {
   const BottomNavbar({super.key});
@@ -31,14 +29,14 @@ class BottomNavbar extends StatelessWidget {
                   ),
                   BottomNavbarWidget(
                     imageUrl: 'assets/images/icon_cafe.png',
-                    title: 'Coffee',
+                    title: 'Cafe',
                     pages: '/cafepage',
                     isSelected: true,
                   ),
                   BottomNavbarWidget(
                     imageUrl: 'assets/images/icon_news.png',
-                    title: 'News',
-                    pages: '/newspage',
+                    title: 'Magazine',
+                    pages: '/magazinepage',
                     isSelected: false,
                   ),
                   GlobalBottomNavBarWidget(

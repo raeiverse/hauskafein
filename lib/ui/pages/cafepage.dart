@@ -13,15 +13,39 @@ class CafePage extends StatelessWidget {
       backgroundColor: whiteColor,
       body: Stack(
         children: [
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 1.8,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/images/cafe/images_background.png'),
+          // Container(
+          //   width: MediaQuery.of(context).size.width,
+          //   height: MediaQuery.of(context).size.height / 1.8,
+          //   decoration: BoxDecoration(
+          //     image: DecorationImage(
+          //       image: AssetImage('assets/images/images_upcomingevent_1.png'),
+          //       fit: BoxFit.cover,
+          //     ),
+          //   ),
+          // ),
+          Stack(
+            children: [
+              Image.asset(
+                'assets/images/images_upcomingevent_1.png',
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 3.54,
                 fit: BoxFit.cover,
               ),
-            ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 3.54,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: <Color>[
+                      transparentColor,
+                      whiteColor,
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
           SingleChildScrollView(
             child: Column(

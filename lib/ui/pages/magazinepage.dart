@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hauskafein/theme.dart';
-import 'package:hauskafein/ui/widget/cafe/HeaderCafe.dart';
-import 'package:hauskafein/ui/widget/magazine/HeaderMagazine.dart';
+import 'package:hauskafein/ui/widget/magazine/BaristaStoriesMagazine.dart';
+import 'package:hauskafein/ui/widget/magazine/TeamReviewMagazine.dart';
 
 class MagazinePage extends StatelessWidget {
   const MagazinePage({super.key});
@@ -12,32 +12,36 @@ class MagazinePage extends StatelessWidget {
       backgroundColor: whiteColor,
       body: Stack(
         children: [
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 1.8,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                    'assets/images/magazine/images_magazineBackground.png'),
+          Stack(
+            children: [
+              Image.asset(
+                'assets/images/magazine/images_magazineBackground.png',
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 4.95,
                 fit: BoxFit.cover,
               ),
-            ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 4.95,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: <Color>[
+                      transparentColor,
+                      whiteColor,
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
-                HeaderMagazine(),
-                Text('data'),
-                HeaderMagazine(),
-                SizedBox(height: 20),
-                Text('data'),
-                HeaderMagazine(),
-                SizedBox(height: 20),
-                Text('data'),
-                HeaderMagazine(),
-                SizedBox(height: 20),
-                Text('data'),
+                TeamReviewMagazine(),
+                BaristaStoriesMagazine(),
               ],
             ),
           ),

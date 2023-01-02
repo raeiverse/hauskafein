@@ -53,6 +53,7 @@ class ReviewCafeProfile extends StatelessWidget {
                       style: HeadlineHead.copyWith(
                         color: Neutral90,
                       ),
+                      overflow: TextOverflow.ellipsis,
                     ),
                     SizedBox(height: 8),
                     Text(

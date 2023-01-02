@@ -12,17 +12,29 @@ class FilterPage extends StatelessWidget {
       backgroundColor: whiteColor,
       body: Stack(
         children: [
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: 236,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                  'assets/images/images_filterBackground.png',
-                ),
-                fit: BoxFit.fill,
+          Stack(
+            children: [
+              Image.asset(
+                'assets/images/images_filterBackground.png',
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 3.54,
+                fit: BoxFit.cover,
               ),
-            ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 3.54,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: <Color>[
+                      transparentColor,
+                      whiteColor,
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
           Container(
             margin: EdgeInsets.only(top: 44, left: 16, right: 16, bottom: 24),
