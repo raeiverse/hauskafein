@@ -2,14 +2,13 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:hauskafein/theme.dart';
+import 'package:hauskafein/ui/pages/BackButtonWidget.dart';
 import 'package:hauskafein/ui/pages/BottomNavbarWidget.dart';
-import 'package:hauskafein/ui/widget/event/event_homepage.dart';
-import 'package:hauskafein/ui/widget/homepage/NewsHomepage.dart';
-import 'package:hauskafein/ui/widget/magazine/BaristaStoriesMagazine.dart';
-import 'package:hauskafein/ui/widget/magazine/TeamReviewMagazine.dart';
+import 'package:hauskafein/ui/widget/event/eventpage/CardEventPage.dart';
+import 'package:hauskafein/ui/widget/event/eventpage/HeaderEventPage.dart';
 
-class MagazinePage extends StatelessWidget {
-  const MagazinePage({super.key});
+class EventPage extends StatelessWidget {
+  const EventPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -65,11 +64,14 @@ class MagazinePage extends StatelessWidget {
         children: [
           Stack(
             children: [
-              Image.asset(
-                'assets/images/magazine/images_magazineBackground.png',
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height / 4.95,
-                fit: BoxFit.cover,
+              Opacity(
+                opacity: 0.8,
+                child: Image.asset(
+                  'assets/images/event/images_eventBackground.png',
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height / 4.95,
+                  fit: BoxFit.cover,
+                ),
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
@@ -90,11 +92,31 @@ class MagazinePage extends StatelessWidget {
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TeamReviewMagazine(),
-                BaristaStoriesMagazine(),
-                Event_Homepage(),
-                NewsHomepage(),
+                BackButtonWidget(),
+                HeaderEventPage(),
+                CardEventPage(
+                  imageUrl: 'assets/images/event/images_content1.png',
+                  title: 'Ngopi Bareng Kopi Sore',
+                  desc:
+                      'This container contain description of expert verified user who objectively leave their review for this cafe. Verified expert should fill this review at least 500 words to be accepted by system.',
+                  date: '17 Jan 2022',
+                ),
+                CardEventPage(
+                  imageUrl: 'assets/images/event/images_content2.png',
+                  title: 'Sore Matching',
+                  desc:
+                      'This container contain description of expert verified user who objectively leave their review for this cafe. Verified expert should fill this review at least 500 words to be accepted by system.',
+                  date: '18 Feb 2022',
+                ),
+                CardEventPage(
+                  imageUrl: 'assets/images/event/images_content3.png',
+                  title: 'A Review: Arion',
+                  desc:
+                      'This container contain description of expert verified user who objectively leave their review for this cafe. Verified expert should fill this review at least 500 words to be accepted by system.',
+                  date: '19 Mar 2022',
+                ),
                 SizedBox(height: MediaQuery.of(context).size.height / 7.2),
               ],
             ),

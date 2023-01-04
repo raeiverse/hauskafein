@@ -1,8 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:hauskafein/theme.dart';
-import 'package:hauskafein/ui/widget/homepage/event_header.dart';
-import 'package:hauskafein/ui/widget/homepage/event_widget.dart';
+import 'package:hauskafein/ui/widget/event/event_header.dart';
+import 'package:hauskafein/ui/widget/event/event_widget.dart';
 import 'package:hauskafein/ui/widget/homepage/today_widget.dart';
 
 class Event_Homepage extends StatefulWidget {

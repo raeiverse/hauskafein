@@ -24,7 +24,7 @@ class BottomNavbar extends StatelessWidget {
                   BottomNavbarWidget(
                     imageUrl: 'assets/images/icon_home.png',
                     title: 'Home',
-                    pages: '/',
+                    pages: '/homepage',
                     isSelected: false,
                   ),
                   BottomNavbarWidget(
@@ -39,10 +39,11 @@ class BottomNavbar extends StatelessWidget {
                     pages: '/magazinepage',
                     isSelected: false,
                   ),
-                  GlobalBottomNavBarWidget(
-                    index: 3,
+                  BottomNavbarWidget(
                     imageUrl: 'assets/images/icon_recipe.png',
                     title: 'Recipe',
+                    pages: '/recipepage',
+                    isSelected: false,
                   ),
                 ],
               ),

@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:hauskafein/theme.dart';
+import 'package:hauskafein/ui/pages/BottomNavbarWidget.dart';
 import 'package:hauskafein/ui/widget/cafe/FilterBarCafe.dart';
 import 'package:hauskafein/ui/widget/cafe/HeaderCafe.dart';
 import 'package:hauskafein/ui/widget/cafe/InfoCardCafe.dart';
@@ -9,20 +12,56 @@ class CafePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget BottomNavBar() {
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+              child: Container(
+                margin: EdgeInsets.symmetric(vertical: 8),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    BottomNavbarWidget(
+                      imageUrl: 'assets/images/icon_home.png',
+                      title: 'Home',
+                      pages: '/homepage',
+                      isSelected: false,
+                    ),
+                    BottomNavbarWidget(
+                      imageUrl: 'assets/images/icon_cafe.png',
+                      title: 'Cafe',
+                      pages: '/cafepage',
+                      isSelected: true,
+                    ),
+                    BottomNavbarWidget(
+                      imageUrl: 'assets/images/icon_news.png',
+                      title: 'Magazine',
+                      pages: '/magazinepage',
+                      isSelected: false,
+                    ),
+                    BottomNavbarWidget(
+                      imageUrl: 'assets/images/icon_recipe.png',
+                      title: 'Recipe',
+                      pages: '/recipepage',
+                      isSelected: false,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      );
+    }
+
     return Scaffold(
       backgroundColor: whiteColor,
       body: Stack(
         children: [
-          // Container(
-          //   width: MediaQuery.of(context).size.width,
-          //   height: MediaQuery.of(context).size.height / 1.8,
-          //   decoration: BoxDecoration(
-          //     image: DecorationImage(
-          //       image: AssetImage('assets/images/images_upcomingevent_1.png'),
-          //       fit: BoxFit.cover,
-          //     ),
-          //   ),
-          // ),
           Stack(
             children: [
               Image.asset(
@@ -93,6 +132,7 @@ class CafePage extends StatelessWidget {
             ),
           ),
           FilterBarCafe(),
+          BottomNavBar(),
         ],
       ),
     );

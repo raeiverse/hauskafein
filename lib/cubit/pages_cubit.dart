@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 
-
 class PagesCubit extends Cubit<int> {
   PagesCubit() : super((0));
   void setPage(int NewPage) {
@@ -19,12 +18,5 @@ class MenuTagCubit extends Cubit<int> {
   MenuTagCubit() : super((0));
   void setMenuTag(int NewMenuTag) {
     emit(NewMenuTag);
-  }
-}
-
-class BackgroundImageCafeProfileCubit extends Cubit<int> {
-  BackgroundImageCafeProfileCubit() : super((0));
-  void setBackgroundImage(int newBackgroundImage) {
-    emit(newBackgroundImage);
   }
 }

@@ -13,16 +13,12 @@ class MenuContent extends StatelessWidget {
         top: 8,
         bottom: 16,
       ),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              MenuTag(),
-              AllMenu(),
-              MenuMenu(),
-            ],
-          ),
+          MenuTag(),
+          AllMenu(),
+          MenuMenu(),
         ],
       ),
     );
