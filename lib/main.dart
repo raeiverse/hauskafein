@@ -11,6 +11,8 @@ import 'package:hauskafein/ui/widget/cafe/cafeprofile/MainCafeProfile.dart';
 import 'package:hauskafein/ui/widget/event/eventpage/ArticleEventPage.dart';
 import 'package:hauskafein/ui/widget/event/eventpage/EventPage.dart';
 import 'package:hauskafein/ui/widget/homepage/search/SearchPage.dart';
+import 'package:hauskafein/ui/widget/news/newspage/ArticleNewsPage.dart';
+import 'package:hauskafein/ui/widget/news/newspage/NewsPage.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -43,6 +45,8 @@ class MyApp extends StatelessWidget {
           '/cafepage': (context) => CafePage(),
           '/magazinepage': (context) => MagazinePage(),
           '/articlepage': (context) => ArticleEventPage(),
+          '/newspage': (context) => NewsPage(),
+          '/articlenewspage': (context) => ArticleNewsPage(),
           '/recipepage': (context) => RecipePage(),
           '/filterpage': (context) => FilterPage(),
           '/searchpage': (context) => SearchPage(),

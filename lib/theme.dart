@@ -39,9 +39,14 @@ FontWeight extraBold = FontWeight.w800;
 FontWeight black = FontWeight.w900;
 
 //textstyles
+TextStyle TitleClashLSB = TextStyle(
+  fontFamily: 'ClashDisplaySB',
+  // fontWeight: regular,
+  // fontSize: 28,
+);
 TextStyle TitleClashL = TextStyle(
   fontFamily: 'ClashDisplay',
-  fontWeight: semiBold,
+  fontWeight: bold,
   fontSize: 24,
 );
 TextStyle TitleClashM = TextStyle(

@@ -13,8 +13,10 @@ class FilterContent extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              width: MediaQuery.of(context).size.width / 5.9,
-              height: MediaQuery.of(context).size.height / 12.2,
+              width: MediaQuery.of(context).size.width / 7.3,
+              height: MediaQuery.of(context).size.height / 14.2,
+              // width: 66,
+              // height: 66,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/images/icon_coffee.png'),

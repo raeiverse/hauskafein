@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hauskafein/theme.dart';
 
-import '../../../../theme.dart';
-
-class ArticleContentEventPage extends StatelessWidget {
-  const ArticleContentEventPage({super.key});
+class ArticleContentNewsPage extends StatelessWidget {
+  const ArticleContentNewsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,111 +38,38 @@ class ArticleContentEventPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(
-                child: Text(
-                  'Ngopi Bareng Kopi Sore',
-                  style: TitleClashL.copyWith(color: Neutral100),
+              Text(
+                'Harga Kopi \nMelambung Tinggi',
+                style: TitleClashLSB.copyWith(
+                  fontSize: 28,
+                  color: Neutral100,
                 ),
               ),
               SizedBox(height: 32),
-              // CALENDAR
-              Padding(
-                padding: const EdgeInsets.only(bottom: 20),
-                child: Row(
-                  children: [
-                    Image.asset(
-                      'assets/images/icon_calendar.png',
-                      width: 18,
-                      height: 18,
-                      fit: BoxFit.contain,
-                    ),
-                    SizedBox(width: 8),
-                    Text(
-                      '17 Jan, 2021',
-                      style: BodyRegular.copyWith(
-                        color: Neutral90,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              // LOCATION
-              Padding(
-                padding: const EdgeInsets.only(bottom: 20),
-                child: Row(
-                  children: [
-                    Image.asset(
-                      'assets/images/icon_loc.png',
-                      width: 18,
-                      height: 18,
-                      fit: BoxFit.contain,
-                    ),
-                    SizedBox(width: 8),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Raos Kopi'),
-                        Text(
-                          'Jl. A Yani Timur no.XX, Tulungagung',
-                          style: BodyRegular.copyWith(
-                            color: Neutral60,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              // TIME
-              Padding(
-                padding: const EdgeInsets.only(bottom: 20),
-                child: Row(
-                  children: [
-                    Image.asset(
-                      'assets/images/icon_time.png',
-                      width: 18,
-                      height: 18,
-                      fit: BoxFit.contain,
-                    ),
-                    SizedBox(width: 8),
-                    Text(
-                      '15.00 - 18.00',
-                      style: BodyRegular.copyWith(
-                        color: Neutral90,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              // PHONE NUMBER
-              Padding(
-                padding: const EdgeInsets.only(bottom: 20),
-                child: Row(
-                  children: [
-                    Image.asset(
-                      'assets/images/icon_call.png',
-                      width: 18,
-                      height: 18,
-                      fit: BoxFit.contain,
-                    ),
-                    SizedBox(width: 8),
-                    Text(
-                      '+6285-9978-XXXX',
-                      style: BodyRegular.copyWith(
-                        color: Neutral90,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
               // AGENDA
               Padding(
                 padding: const EdgeInsets.only(bottom: 8),
-                child: Text(
-                  'Agenda',
-                  style: BodyRegular.copyWith(
-                    color: Neutral60,
-                  ),
+                child: Row(
+                  children: [
+                    Text(
+                      'Agenda',
+                      style: BodyRegular.copyWith(
+                        color: Neutral60,
+                      ),
+                    ),
+                    Text(
+                      'Agenda',
+                      style: BodyRegular.copyWith(
+                        color: Neutral60,
+                      ),
+                    ),
+                    Text(
+                      'Agenda',
+                      style: BodyRegular.copyWith(
+                        color: Neutral60,
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Padding(

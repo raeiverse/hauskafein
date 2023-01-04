@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:hauskafein/theme.dart';
 import 'package:hauskafein/ui/pages/BottomNavbarWidget.dart';
 import 'package:hauskafein/ui/widget/event/event_homepage.dart';
-import 'package:hauskafein/ui/widget/homepage/NewsHomepage.dart';
 import 'package:hauskafein/ui/widget/magazine/BaristaStoriesMagazine.dart';
 import 'package:hauskafein/ui/widget/magazine/TeamReviewMagazine.dart';
+
+import '../widget/news/NewsHomepage.dart';
 
 class MagazinePage extends StatelessWidget {
   const MagazinePage({super.key});

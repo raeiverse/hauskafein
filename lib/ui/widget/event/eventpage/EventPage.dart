@@ -62,6 +62,7 @@ class EventPage extends StatelessWidget {
       backgroundColor: whiteColor,
       body: Stack(
         children: [
+          // BACKGROUND
           Stack(
             children: [
               Opacity(

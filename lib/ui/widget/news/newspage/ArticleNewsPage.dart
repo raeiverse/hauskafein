@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:hauskafein/theme.dart';
 import 'package:hauskafein/ui/pages/BackButtonWidget.dart';
 import 'package:hauskafein/ui/widget/event/eventpage/ArticleContentEventPage.dart';
+import 'package:hauskafein/ui/widget/news/newspage/ArticleContentNewsPage.dart';
 
-class ArticleEventPage extends StatelessWidget {
-  const ArticleEventPage({super.key});
+import '../../../../theme.dart';
+
+class ArticleNewsPage extends StatelessWidget {
+  const ArticleNewsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class ArticleEventPage extends StatelessWidget {
           Opacity(
             opacity: 0.8,
             child: Image.asset(
-              'assets/images/event/images_articleBackground.png',
+              'assets/images/news/images_articlebackground.png',
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height / 2.17,
               fit: BoxFit.cover,
@@ -41,17 +43,15 @@ class ArticleEventPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: whiteColor,
       body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Stack(
+        child: Column(
           children: [
-            background(),
-            Column(
+            Stack(
               children: [
-                ArticleContentEventPage(),
-                SizedBox(height: MediaQuery.of(context).size.height / 12.4),
+                background(),
+                BackButtonWidget(),
+                ArticleContentNewsPage(),
               ],
             ),
-            BackButtonWidget(),
           ],
         ),
       ),

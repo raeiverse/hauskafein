@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hauskafein/ui/widget/homepage/NewsHeader.dart';
-import 'package:hauskafein/ui/widget/homepage/NewsWidget.dart';
+import 'package:hauskafein/ui/widget/news/NewsHeader.dart';
+import 'package:hauskafein/ui/widget/news/NewsWidget.dart';
 
 import '../../../theme.dart';
 
