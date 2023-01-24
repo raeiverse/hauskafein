@@ -40,8 +40,7 @@ class ArticleContentNewsPage extends StatelessWidget {
             children: [
               Text(
                 'Harga Kopi \nMelambung Tinggi',
-                style: TitleClashLSB.copyWith(
-                  fontSize: 28,
+                style: TitleClashL.copyWith(
                   color: Neutral100,
                 ),
               ),
@@ -52,19 +51,37 @@ class ArticleContentNewsPage extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      'Agenda',
+                      '17 Jan 2022',
                       style: BodyRegular.copyWith(
                         color: Neutral60,
                       ),
                     ),
-                    Text(
-                      'Agenda',
-                      style: BodyRegular.copyWith(
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 16),
+                      width: 3,
+                      height: 3,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
                         color: Neutral60,
                       ),
                     ),
                     Text(
-                      'Agenda',
+                      '10 min read',
+                      style: BodyRegular.copyWith(
+                        color: Neutral60,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 16),
+                      width: 3,
+                      height: 3,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Neutral60,
+                      ),
+                    ),
+                    Text(
+                      'Iqbal Abdulrahman',
                       style: BodyRegular.copyWith(
                         color: Neutral60,
                       ),

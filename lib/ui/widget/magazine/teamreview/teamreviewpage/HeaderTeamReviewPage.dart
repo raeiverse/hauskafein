@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../../../../theme.dart';
+import '../../../../../theme.dart';
 
-class HeaderNewsPage extends StatefulWidget {
-  const HeaderNewsPage({super.key});
+class HeaderTeamReviewPage extends StatefulWidget {
+  const HeaderTeamReviewPage({super.key});
 
   @override
-  State<HeaderNewsPage> createState() => _HeaderNewsPageState();
+  State<HeaderTeamReviewPage> createState() => _HeaderTeamReviewPageState();
 }
 
-class _HeaderNewsPageState extends State<HeaderNewsPage> {
+class _HeaderTeamReviewPageState extends State<HeaderTeamReviewPage> {
   String? selected;
   List<String> SortData = [
     'By Popularity',
@@ -27,7 +27,7 @@ class _HeaderNewsPageState extends State<HeaderNewsPage> {
           Container(
             margin: EdgeInsets.only(left: 24),
             child: Text(
-              'News',
+              'Team Review',
               style: TitleClashM.copyWith(color: Neutral100),
             ),
           ),

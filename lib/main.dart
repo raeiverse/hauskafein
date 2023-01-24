@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hauskafein/cubit/pages_cubit.dart';
+import 'package:hauskafein/ui/pages/404page.dart';
 import 'package:hauskafein/ui/pages/Mainpage.dart';
 import 'package:hauskafein/ui/pages/cafepage.dart';
 import 'package:hauskafein/ui/pages/homepage.dart';
@@ -11,8 +12,14 @@ import 'package:hauskafein/ui/widget/cafe/cafeprofile/MainCafeProfile.dart';
 import 'package:hauskafein/ui/widget/event/eventpage/ArticleEventPage.dart';
 import 'package:hauskafein/ui/widget/event/eventpage/EventPage.dart';
 import 'package:hauskafein/ui/widget/homepage/search/SearchPage.dart';
-import 'package:hauskafein/ui/widget/news/newspage/ArticleNewsPage.dart';
-import 'package:hauskafein/ui/widget/news/newspage/NewsPage.dart';
+import 'package:hauskafein/ui/widget/magazine/baristastories/baristastoriespage/ArticleBaristaStoriesPage.dart';
+import 'package:hauskafein/ui/widget/magazine/baristastories/baristastoriespage/BaristaStoriesPage.dart';
+import 'package:hauskafein/ui/widget/magazine/news/newspage/ArticleNewsPage.dart';
+import 'package:hauskafein/ui/widget/magazine/news/newspage/NewsPage.dart';
+import 'package:hauskafein/ui/widget/magazine/teamreview/teamreviewpage/ArticleTeamReviewPage.dart';
+import 'package:hauskafein/ui/widget/magazine/teamreview/teamreviewpage/TeamReviewPage.dart';
+import 'package:hauskafein/ui/widget/recipe/recipepage/ArticleRecipePage.dart';
+import 'package:hauskafein/ui/widget/recipe/recipepage/RecipeMenuPage.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -47,10 +54,18 @@ class MyApp extends StatelessWidget {
           '/articlepage': (context) => ArticleEventPage(),
           '/newspage': (context) => NewsPage(),
           '/articlenewspage': (context) => ArticleNewsPage(),
+          '/teamreviewpage': (context) => TeamReviewPage(),
+          '/articleteamreviewpage': (context) => ArticleTeamReviewPage(),
+          '/baristastoriespage': (context) => BaristaStoriesPage(),
+          '/articlebaristastoriespage': (context) =>
+              ArticleBaristaStoriesPage(),
           '/recipepage': (context) => RecipePage(),
+          '/menurecipepage': (context) => RecipeMenuPage(),
+          '/articlerecipepage': (context) => ArticleRecipePage(),
           '/filterpage': (context) => FilterPage(),
           '/searchpage': (context) => SearchPage(),
           '/eventpage': (context) => EventPage(),
+          '/errorpage': (context) => errorpage(),
         },
       ),
     );

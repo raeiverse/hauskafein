@@ -45,17 +45,17 @@ TextStyle TitleClashLSB = TextStyle(
   // fontSize: 28,
 );
 TextStyle TitleClashL = TextStyle(
-  fontFamily: 'ClashDisplay',
-  fontWeight: bold,
-  fontSize: 24,
+  fontFamily: 'ClashDisplaySB',
+  fontWeight: semiBold,
+  fontSize: 28,
 );
 TextStyle TitleClashM = TextStyle(
-  fontFamily: 'ClashDisplay',
+  fontFamily: 'ClashDisplaySB',
   fontWeight: semiBold,
   fontSize: 20,
 );
 TextStyle TitleClashS = TextStyle(
-  fontFamily: 'ClashDisplay',
+  fontFamily: 'ClashDisplaySB',
   fontWeight: semiBold,
   fontSize: 18,
 );

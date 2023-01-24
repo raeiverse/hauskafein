@@ -23,8 +23,8 @@ class SearchPopularWidget extends StatelessWidget {
             height: 140,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/1.jpg'),
-                fit: BoxFit.contain,
+                image: AssetImage('assets/images/cafe/images_popular_1.png'),
+                fit: BoxFit.cover,
               ),
             ),
           ),

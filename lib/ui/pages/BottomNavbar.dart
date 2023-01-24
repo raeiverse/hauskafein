@@ -5,7 +5,11 @@ import 'package:hauskafein/ui/pages/BottomNavbarWidget.dart';
 import 'package:hauskafein/ui/pages/GlobalBottomNavBarWidget.dart';
 
 class BottomNavbar extends StatelessWidget {
-  const BottomNavbar({super.key});
+  // final bool selected;
+  const BottomNavbar({
+    Key? key,
+    // required this.selected,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

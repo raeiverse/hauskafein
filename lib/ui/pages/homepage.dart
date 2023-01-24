@@ -7,7 +7,7 @@ import 'package:hauskafein/ui/widget/event/event_homepage.dart';
 import 'package:hauskafein/ui/widget/homepage/BottomSearchRecNavBar.dart';
 import 'package:hauskafein/ui/widget/homepage/today_homepage.dart';
 
-import '../widget/news/NewsHomepage.dart';
+import '../widget/magazine/news/NewsHomepage.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});

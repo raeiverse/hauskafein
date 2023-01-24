@@ -1,15 +1,16 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:hauskafein/theme.dart';
-import 'package:hauskafein/ui/pages/BackButtonWidget.dart';
-import 'package:hauskafein/ui/widget/news/newspage/CardNewsPage.dart';
-import 'package:hauskafein/ui/widget/news/newspage/HeaderNewsPage.dart';
+import 'package:hauskafein/ui/widget/magazine/baristastories/baristastoriespage/HeaderBaristaStoriesPage.dart';
 
-import '../../../pages/BottomNavbarWidget.dart';
+import '../../../../../theme.dart';
+import '../../../../pages/BackButtonWidget.dart';
+import '../../../../pages/BottomNavbarWidget.dart';
+import '../../../LinearBlurBackground.dart';
+import '../../../MagazineCard.dart';
 
-class NewsPage extends StatelessWidget {
-  const NewsPage({super.key});
+class BaristaStoriesPage extends StatelessWidget {
+  const BaristaStoriesPage({super.key});
 
   @override
   Widget BottomNavBar() {
@@ -63,44 +64,9 @@ class NewsPage extends StatelessWidget {
       backgroundColor: whiteColor,
       body: Stack(
         children: [
-          // BACKGROUND
-          Stack(
-            children: [
-              Opacity(
-                opacity: 0.8,
-                child: Image.asset(
-                  'assets/images/news/images_background.png',
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height / 4.95,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height / 4.95,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: <Color>[
-                      whiteColor.withOpacity(0),
-                      whiteColor,
-                    ],
-                  ),
-                ),
-                child: BackdropFilter(
-                  filter: ImageFilter.blur(
-                    sigmaX: 5,
-                    sigmaY: 5,
-                  ),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Neutral10.withOpacity(0),
-                    ),
-                  ),
-                ),
-              ),
-            ],
+          LinearBlurBackground(
+            imageUrl: 'assets/images/images_upcomingevent_1.png',
+            height: 4.95,
           ),
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
@@ -108,26 +74,18 @@ class NewsPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 BackButtonWidget(),
-                HeaderNewsPage(),
-                CardNewsPage(
-                  imageUrl: 'assets/images/news/images_content1.png',
-                  title: 'Harga Kopi Melambung Tinggi',
-                  desc:
-                      'This container contain description of expert verified user who objectively leave their review for this cafe. Verified expert should fill this review at least 500 words to be accepted by system.',
-                  date: '17 Jan 2022',
-                ),
-                CardNewsPage(
+                HeaderBaristaStoriesPage(),
+                MagazineCard(
                   imageUrl: 'assets/images/news/images_content2.png',
                   title: 'Harga Kopi Melambung Tinggi',
                   desc:
                       'This container contain description of expert verified user who objectively leave their review for this cafe. Verified expert should fill this review at least 500 words to be accepted by system.',
                   date: '17 Jan 2022',
+                  nextPage: '/articlebaristastoriespage',
                 ),
-                SizedBox(height: MediaQuery.of(context).size.height / 7.2),
               ],
             ),
           ),
-          BottomNavBar(),
         ],
       ),
     );

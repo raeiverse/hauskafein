@@ -63,10 +63,8 @@ class Today_Widget extends StatelessWidget {
                             Expanded(
                               child: Text(
                                 title,
-                                style: titleText.copyWith(
-                                  fontWeight: semiBold,
-                                  fontSize: 14,
-                                  color: whiteColor,
+                                style: HeadlineHead.copyWith(
+                                  color: Neutral10,
                                 ),
                                 overflow: TextOverflow.ellipsis,
                               ),
@@ -85,9 +83,8 @@ class Today_Widget extends StatelessWidget {
                                 ),
                                 Text(
                                   rating.toString(),
-                                  style: titleText.copyWith(
-                                    fontWeight: medium,
-                                    color: whiteColor,
+                                  style: BodyRegular.copyWith(
+                                    color: Neutral10,
                                   ),
                                 ),
                               ],
@@ -96,7 +93,9 @@ class Today_Widget extends StatelessWidget {
                         ),
                         Text(
                           desc,
-                          style: regularText.copyWith(color: whiteColor),
+                          style: BodyRegular.copyWith(
+                            color: Neutral10,
+                          ),
                           overflow: TextOverflow.ellipsis,
                           maxLines: 2,
                         ),

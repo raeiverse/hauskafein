@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../theme.dart';
+import '../../../../theme.dart';
 
 class NewsHeader extends StatelessWidget {
   const NewsHeader({super.key});

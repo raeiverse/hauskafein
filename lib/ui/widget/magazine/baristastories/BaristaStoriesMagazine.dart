@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hauskafein/theme.dart';
-import 'package:hauskafein/ui/widget/magazine/BaristaStoriesCardWidget.dart';
+import 'BaristaStoriesCardWidget.dart';
 
 class BaristaStoriesMagazine extends StatelessWidget {
   const BaristaStoriesMagazine({super.key});
@@ -18,18 +18,23 @@ class BaristaStoriesMagazine extends StatelessWidget {
                 'Barista Stories',
                 style: TitleClashM.copyWith(color: Neutral100),
               ),
-              Row(
-                children: [
-                  Text(
-                    'see more',
-                    style: BodyRegular.copyWith(color: orangeColor),
-                  ),
-                  Image.asset(
-                    'assets/images/icon_arrowright.png',
-                    width: 20,
-                    height: 20,
-                  ),
-                ],
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/baristastoriespage');
+                },
+                child: Row(
+                  children: [
+                    Text(
+                      'see more',
+                      style: BodyRegular.copyWith(color: orangeColor),
+                    ),
+                    Image.asset(
+                      'assets/images/icon_arrowright.png',
+                      width: 20,
+                      height: 20,
+                    ),
+                  ],
+                ),
               )
             ],
           ),

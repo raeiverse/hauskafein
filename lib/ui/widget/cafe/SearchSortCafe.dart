@@ -126,9 +126,11 @@ class _SearchSortCafePageState extends State<SearchSortCafePage> {
                     ),
                   ).toList(),
                   onChanged: ((value) {
-                    setState(() {
-                      selected = value;
-                    });
+                    setState(
+                      () {
+                        selected = value;
+                      },
+                    );
                   }),
                 ),
               ),

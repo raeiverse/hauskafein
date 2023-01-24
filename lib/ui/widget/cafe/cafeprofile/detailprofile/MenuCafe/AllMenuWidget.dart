@@ -20,8 +20,8 @@ class AllMenuWidget extends StatelessWidget {
               color: blackColor,
               borderRadius: CardRadius,
               image: DecorationImage(
-                image: AssetImage('assets/images/1.jpg'),
-                fit: BoxFit.fill,
+                image: AssetImage('assets/images/ice_1.png'),
+                fit: BoxFit.cover,
               ),
             ),
           ),

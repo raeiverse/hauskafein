@@ -110,7 +110,7 @@ class _MainCafeProfileState extends State<MainCafeProfile> {
                 ),
                 MainContent(),
                 ReviewCafeProfile(
-                  imageUrl: 'assets/images/1.jpg',
+                  imageUrl: 'assets/images/magazine/images_barista2.png',
                   title: 'A Review: Ancala Coffee & Bistro',
                   desc:
                       'Description container, where you can spoil about the review',

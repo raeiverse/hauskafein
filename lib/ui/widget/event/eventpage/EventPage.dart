@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:hauskafein/theme.dart';
 import 'package:hauskafein/ui/pages/BackButtonWidget.dart';
 import 'package:hauskafein/ui/pages/BottomNavbarWidget.dart';
+import 'package:hauskafein/ui/widget/LinearBackground.dart';
 import 'package:hauskafein/ui/widget/event/eventpage/CardEventPage.dart';
 import 'package:hauskafein/ui/widget/event/eventpage/HeaderEventPage.dart';
 
@@ -62,33 +63,9 @@ class EventPage extends StatelessWidget {
       backgroundColor: whiteColor,
       body: Stack(
         children: [
-          // BACKGROUND
-          Stack(
-            children: [
-              Opacity(
-                opacity: 0.8,
-                child: Image.asset(
-                  'assets/images/event/images_eventBackground.png',
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height / 4.95,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height / 4.95,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: <Color>[
-                      transparentColor,
-                      whiteColor,
-                    ],
-                  ),
-                ),
-              ),
-            ],
+          LinearBackground(
+            imageUrl: 'assets/images/event/images_eventBackground.png',
+            height: 4.95,
           ),
           SingleChildScrollView(
             scrollDirection: Axis.vertical,

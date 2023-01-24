@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
 
-import '../../../theme.dart';
+import '../../theme.dart';
 
-class NewsWidget extends StatelessWidget {
-  const NewsWidget({super.key});
+class ArticleCard extends StatelessWidget {
+  final String imageUrl;
+  final String title;
+  final String desc;
+  final String date;
+  const ArticleCard({
+    Key? key,
+    required this.imageUrl,
+    required this.title,
+    required this.desc,
+    required this.date,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -41,9 +51,7 @@ class NewsWidget extends StatelessWidget {
                           left: Radius.circular(8),
                         ),
                         image: DecorationImage(
-                            image:
-                                AssetImage('assets/images/images_news_1.png'),
-                            fit: BoxFit.cover),
+                            image: AssetImage(imageUrl), fit: BoxFit.cover),
                       ),
                     ),
                     Container(
@@ -59,7 +67,7 @@ class NewsWidget extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Harga Kopi Melambung Tinggi',
+                                title,
                                 style: regularText.copyWith(
                                   fontSize: 12,
                                   fontWeight: medium,
@@ -67,7 +75,7 @@ class NewsWidget extends StatelessWidget {
                               ),
                               SizedBox(height: 8),
                               Text(
-                                'Wakil Ketua Asosiasi Eksportir & Industri Kopi Indonesia (AEKI) Pranoto Soenarto menyayangkan aksi spekulan memanfaatkan lonjakan harga kopi. Pasalnya, kecurangan itu akan merugikan petani kopi yang baru saja menikmati kenaikan harga.',
+                                desc,
                                 style: regularText.copyWith(
                                   fontSize: 10,
                                   color: blackColor.withOpacity(0.9),
@@ -77,7 +85,7 @@ class NewsWidget extends StatelessWidget {
                               ),
                               Spacer(),
                               Text(
-                                '13 January 2022',
+                                date,
                                 style: regularText.copyWith(
                                   fontSize: 10,
                                   color: blackColor.withOpacity(0.6),

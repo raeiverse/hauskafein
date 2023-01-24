@@ -21,7 +21,7 @@ class MenuMenu extends StatelessWidget {
           ),
         ),
         MenuMenuWidget(
-          imageUrl: 'assets/images/1.jpg',
+          imageUrl: 'assets/images/ice_1.png',
           title: 'Cappucino',
           desc:
               'Menggunakan biji kopi robusta dan diproses dengan campuran 7:3',
@@ -29,7 +29,7 @@ class MenuMenu extends StatelessWidget {
           tag: 'Coffee',
         ),
         MenuMenuWidget(
-          imageUrl: 'assets/images/1.jpg',
+          imageUrl: 'assets/images/ice_1.png',
           title: 'Cappucino',
           desc:
               'Menggunakan biji kopi robusta dan diproses dengan campuran 7:3',

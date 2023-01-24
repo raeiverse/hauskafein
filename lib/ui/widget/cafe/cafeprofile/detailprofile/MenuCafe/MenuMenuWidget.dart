@@ -33,7 +33,7 @@ class MenuMenuWidget extends StatelessWidget {
               borderRadius: CardRadius,
               image: DecorationImage(
                 image: AssetImage(imageUrl),
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
               ),
             ),
           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hauskafein/theme.dart';
 import 'package:hauskafein/ui/pages/CloseButtonWidget.dart';
+import 'package:hauskafein/ui/widget/LinearBackground.dart';
 import 'package:hauskafein/ui/widget/cafe/FilterContent.dart';
 
 class FilterPage extends StatelessWidget {
@@ -12,29 +13,9 @@ class FilterPage extends StatelessWidget {
       backgroundColor: whiteColor,
       body: Stack(
         children: [
-          Stack(
-            children: [
-              Image.asset(
-                'assets/images/images_filterBackground.png',
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height / 3.54,
-                fit: BoxFit.cover,
-              ),
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height / 3.54,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: <Color>[
-                      transparentColor,
-                      whiteColor,
-                    ],
-                  ),
-                ),
-              ),
-            ],
+          LinearBackground(
+            imageUrl: 'assets/images/images_filterBackground.png',
+            height: 3.54,
           ),
           Container(
             margin: EdgeInsets.only(top: 44, left: 16, right: 16, bottom: 24),
@@ -56,14 +37,47 @@ class FilterPage extends StatelessWidget {
                 SizedBox(height: 24),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
-                  child: Wrap(
-                    children: [
-                      FilterContent(),
-                      FilterContent(),
-                      FilterContent(),
-                      FilterContent(),
-                      FilterContent(),
-                    ],
+                  child: Center(
+                    child: Wrap(
+                      children: [
+                        FilterContent(
+                          imageUrl: 'assets/images/icon_coffee.png',
+                          title: 'Coffee',
+                        ),
+                        FilterContent(
+                          imageUrl: 'assets/images/icon_tea.png',
+                          title: 'Tea',
+                        ),
+                        FilterContent(
+                          imageUrl: 'assets/images/icon_milk.png',
+                          title: 'Milk Based',
+                        ),
+                        FilterContent(
+                          imageUrl: 'assets/images/icon_boba.png',
+                          title: 'Boba',
+                        ),
+                        FilterContent(
+                          imageUrl: 'assets/images/icon_yogurt.png',
+                          title: 'Yogurt',
+                        ),
+                        FilterContent(
+                          imageUrl: 'assets/images/icon_icecream.png',
+                          title: 'Ice Cream',
+                        ),
+                        FilterContent(
+                          imageUrl: 'assets/images/icon_boba.png',
+                          title: 'Boba',
+                        ),
+                        FilterContent(
+                          imageUrl: 'assets/images/icon_smoothies.png',
+                          title: 'Smoothies',
+                        ),
+                        FilterContent(
+                          imageUrl: 'assets/images/icon_softdrink.png',
+                          title: 'Softdrink',
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(height: 8),
@@ -76,11 +90,23 @@ class FilterPage extends StatelessWidget {
                 SizedBox(height: 24),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
-                  child: Wrap(
-                    children: [
-                      FilterContent(),
-                      FilterContent(),
-                    ],
+                  child: Center(
+                    child: Wrap(
+                      children: [
+                        FilterContent(
+                          imageUrl: 'assets/images/icon_snack.png',
+                          title: 'Snack',
+                        ),
+                        FilterContent(
+                          imageUrl: 'assets/images/icon_meal.png',
+                          title: 'Main Course',
+                        ),
+                        FilterContent(
+                          imageUrl: 'assets/images/blank.png',
+                          title: ' ',
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],

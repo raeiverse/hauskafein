@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:hauskafein/theme.dart';
@@ -7,10 +9,58 @@ import 'package:hauskafein/ui/widget/homepage/search/SearchFilter.dart';
 import 'package:hauskafein/ui/widget/homepage/search/SearchPopular.dart';
 import 'package:latlong2/latlong.dart';
 
+import '../../../pages/BottomNavbarWidget.dart';
+
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
 
   @override
+  Widget BottomNavBar() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(8),
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+            child: Container(
+              margin: EdgeInsets.symmetric(vertical: 8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  BottomNavbarWidget(
+                    imageUrl: 'assets/images/icon_home.png',
+                    title: 'Home',
+                    pages: '/homepage',
+                    isSelected: false,
+                  ),
+                  BottomNavbarWidget(
+                    imageUrl: 'assets/images/icon_cafe.png',
+                    title: 'Cafe',
+                    pages: '/cafepage',
+                    isSelected: true,
+                  ),
+                  BottomNavbarWidget(
+                    imageUrl: 'assets/images/icon_news.png',
+                    title: 'Magazine',
+                    pages: '/magazinepage',
+                    isSelected: false,
+                  ),
+                  BottomNavbarWidget(
+                    imageUrl: 'assets/images/icon_recipe.png',
+                    title: 'Recipe',
+                    pages: '/recipepage',
+                    isSelected: false,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: whiteColor,
@@ -107,7 +157,7 @@ class SearchPage extends StatelessWidget {
               decoration: BoxDecoration(color: whiteColor),
             ),
           ),
-          BottomNavbar(),
+          BottomNavBar(),
         ],
       ),
     );

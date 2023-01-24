@@ -23,10 +23,15 @@ class SearchPopular extends StatelessWidget {
                   ),
                 ),
                 Spacer(),
-                Text(
-                  'See More',
-                  style: BodyRegular.copyWith(
-                    color: orangeColor,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/cafepage');
+                  },
+                  child: Text(
+                    'See More',
+                    style: BodyRegular.copyWith(
+                      color: orangeColor,
+                    ),
                   ),
                 ),
               ],

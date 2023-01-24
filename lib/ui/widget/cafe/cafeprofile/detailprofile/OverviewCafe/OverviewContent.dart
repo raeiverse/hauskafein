@@ -33,8 +33,8 @@ class OverviewContent extends StatelessWidget {
                 child: Row(
                   children: [
                     EquipmentWidgetOverview(
-                      imageUrl: 'assets/images/1.jpg',
-                      caption: 'Nilou',
+                      imageUrl: 'assets/images/images_equipment_1.png',
+                      caption: 'La Nuava Era-Arpa 2',
                     ),
                   ],
                 ),

@@ -79,17 +79,19 @@ class ArticleContentEventPage extends StatelessWidget {
                       fit: BoxFit.contain,
                     ),
                     SizedBox(width: 8),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Raos Kopi'),
-                        Text(
-                          'Jl. A Yani Timur no.XX, Tulungagung',
-                          style: BodyRegular.copyWith(
-                            color: Neutral60,
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Raos Kopi'),
+                          Text(
+                            'Jl. A Yani Timur no.XX, Tulungagung',
+                            style: BodyRegular.copyWith(
+                              color: Neutral60,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),
